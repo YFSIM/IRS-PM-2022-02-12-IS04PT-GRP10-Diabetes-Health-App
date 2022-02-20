@@ -19,7 +19,7 @@ good good good
 | Santi- | A1234567B | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| e0938899@u.nus.edu |
 | Sim Yuh Fan | A249251E | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| e0938856@u.nus.edu |
 | Tan Xiang Feng | A1234567D | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| e0938623@u.nus.edu |
-| Zhang Zhewei | A1234567E | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| e0938836@u.nus.edu |
+| Zhang Zhewei | A1234567E | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| e0938863@u.nus.edu |
 
 ---
 
