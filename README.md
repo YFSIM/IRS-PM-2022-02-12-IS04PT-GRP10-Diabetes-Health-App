@@ -7,7 +7,9 @@
 ---
 
 ## SECTION 2 : EXECUTIVE SUMMARY / PAPER ABSTRACT
-good good good
+This E-Doctor is expect in Diabates patient. He can provide:
+1) Advise on healthy people about their diabete condition.
+2) Diagnoze the diabete patients about the stage of their sickness. 
 
 ---
 
