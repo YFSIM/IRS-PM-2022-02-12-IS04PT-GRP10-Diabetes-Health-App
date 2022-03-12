@@ -7,7 +7,7 @@
 ---
 
 ## SECTION 2 : EXECUTIVE SUMMARY / PAPER ABSTRACT
-This E-Doctor is expect in Diabates patient. He can provide:
+This E-Doctor is an expert in Diabates. It can provides the following services remotely:
 1) Advise on healthy people about their diabete condition.
 2) Diagnoze the diabete patients about the stage of their sickness. 
 
