@@ -1,4 +1,4 @@
-## SECTION 1 : IRS-PM-2022-02-12-ISY5001-GRP10-ProjectName-Diabetes-E-Doctor
+## SECTION 1 : IRS-PM-2022-02-12-IS04PT-GRP10-Diabetic-Health-App
 ## Diabates - xxx System / Model
 
 <img src="SystemCode/clips/static/hdb-bto.png"
