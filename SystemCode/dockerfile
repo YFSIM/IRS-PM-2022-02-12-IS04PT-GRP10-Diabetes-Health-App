@@ -1,0 +1,51 @@
+FROM nvidia/cuda:11.6.0-base-ubuntu20.04 
+
+
+# Install base utilities
+# RUN apt-get update && \
+#     apt-get install -y build-essentials  && \
+#     apt-get install -y wget &&
+#     apt-get clean && \
+#     rm -rf /var/lib/apt/lists/*
+RUN apt-get update
+#RUN apt-get install -y build-essentials
+RUN apt-get install -y wget
+RUN apt-get clean
+RUN rm -rf /var/lib/apt/lists/*
+# Install miniconda
+ENV CONDA_DIR /opt/conda
+#RUN yum -y install wget
+RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
+RUN /bin/bash ~/miniconda.sh -b -p /opt/conda
+
+# Put conda in path so we can use conda activate
+ENV PATH=$CONDA_DIR/bin:$PATH
+
+
+
+WORKDIR .
+
+# Create the environment:
+COPY environment.yml .
+#COPY db/* /db/
+#COPY model/* /model/
+#COPY src/* /src/
+#RUN ls -la /*
+
+COPY . /
+
+RUN conda env create -f environment.yml
+
+# Make RUN commands use the new environment:
+SHELL ["conda", "run", "-n", "healthApp", "/bin/bash", "-c"]
+
+# Demonstrate the environment is activated:
+RUN echo "Make sure flask is installed:"
+RUN python -c "import flask"
+
+ENV NVIDIA_VISIBLE_DEVICES all
+ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
+
+# The code to run when container is started:
+COPY app.py .
+ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "healthApp", "python", "app.py"]

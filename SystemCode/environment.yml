@@ -1,0 +1,18 @@
+name: healthApp
+channels:
+  - conda-forge
+dependencies:
+  - python=3.7
+  - flask
+  - pandas
+  - numpy=1.19.5
+  - flask-restful
+  - psycopg2
+  - scikit-learn=0.23.2 
+  - tensorflow=2.6.2
+  - keras=2.6.0
+  - Pillow
+  - pip
+  - pip:
+    - opencv-python-headless
+
