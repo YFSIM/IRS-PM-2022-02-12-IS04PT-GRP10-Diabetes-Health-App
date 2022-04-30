@@ -1,5 +1,5 @@
-## SECTION 1 : IRS-PM-2022-02-12-IS04PT-GRP10-Diabetic-Health-App
-## Diabates - xxx System / Model
+## SECTION 1 : IRS-PM-2022-02-12-IS04PT-GRP10-Diabetes-Health-App
+## Diabates Health App
 
 <img src="SystemCode/clips/static/hdb-bto.png"
      style="float: left; margin-right: 0px;" />
