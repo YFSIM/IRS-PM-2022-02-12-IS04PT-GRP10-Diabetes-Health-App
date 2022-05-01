@@ -17,15 +17,11 @@ This E-Doctor is an expert in Diabates. It can provides the following services r
 
 | Official Full Name  | Student ID (MTech Applicable)  | Work Items (Who Did What) | Email (Optional) |
 | :------------ |:---------------:| :-----| :-----|
-| Sahendra Pang | A0135877N | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| e0938644@u.nus.edu |
-| Santi- | A0249294R | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| e0938899@u.nus.edu |
-| Sim Yuh Fan | A0249251E | Administrative Lead 
-
-UI/UX Development 
-
-Backend Application Development | e0938856@u.nus.edu |
-| Tan Xiang Feng | A0072452L | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| e0938623@u.nus.edu |
-| Zhang Zhewei | A0249258R | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| e0938863@u.nus.edu |
+| Sahendra Pang | A0135877N | Backend Application Development , Model Development and Testing (Strategy 3) , Video| e0938644@u.nus.edu |
+| Santi- | A0249294R | Application Design and Development, Model Development and Testing (Strategy 1 & 2), Project Report Writing | e0938899@u.nus.edu |
+| Sim Yuh Fan | A0249251E | Administrative Lead, UI/UX Development, Backend Application Development | e0938856@u.nus.edu |
+| Tan Xiang Feng | A0072452L | Model Development and Testing (Strategy 3), Project Report Writing, Video | e0938623@u.nus.edu |
+| Zhang Zhewei | A0249258R | Model Development and Testing (Strategy 1), Project Report Writing, Video| e0938863@u.nus.edu |
 
 ---
 
