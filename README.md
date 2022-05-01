@@ -7,9 +7,20 @@
 ---
 
 ## SECTION 2 : EXECUTIVE SUMMARY / PAPER ABSTRACT
-This E-Doctor is an expert in Diabates. It can provides the following services remotely:
-1) Advise on healthy people about their diabete condition.
-2) Diagnoze the diabete patients about the stage of their sickness. 
+Diabetes is a worldwide health problem that have affected 400 million people worldwide. There are two major types of diabetes:  
+     Type 1 – often diagnosed in childhood. 
+     Type 2 – largely caused by an unhealthy lifestyle and diet.  
+
+From a study by International Diabetes Federation (IDF) done in 2015, it revealed that Singapore had the second highest proportion of diabetes among developed nations. The number of diabetic cases were projected to further increase by another 200K to 600K by 2030. In terms of long-term complications, we had the highest rate of lower limb amputation in the world with about 1,200 diabetes patients undergoing amputation every year. 
+
+While there is no cure for diabetes, Type 2 diabetes can be managed and prevented through one’s lifestyle. By leveraging on the power of machine learning and Artificial Intelligence (‘AI’), we aim to develop a tool to 
+
+     1. Allow individual to self-assess their risk of having type 2 diabetes 
+     2. Help individual manage diabetes 
+     3. Look out for signs of complications such as blindness 
+     4. Other health problem that often be linked with a diabetic patient (for future release). 
+
+This is achieved using an AI-powered Do-It-Yourself (DIY) Diabetes Health App as a “minimum viable product” (MVP). The first release can be improved upon successive releases with more user experience.
 
 ---
 
