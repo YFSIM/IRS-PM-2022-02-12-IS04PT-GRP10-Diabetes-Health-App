@@ -40,7 +40,7 @@ This is achieved using an AI-powered Do-It-Yourself (DIY) Diabetes Health App as
 ## SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
 
 System technical design explanation:
-<img src="Miscellaneous/Img/cover.png" style="float: left; margin-right: 0px;" />]
+<img src="Miscellaneous/Img/cover.png" style="float: left; margin-right: 0px;" />
 https://github.com/YFSIM/IRS-PM-2022-02-12-IS04PT-GRP10-Diabetes-Health-App/blob/main/Video/DiabeticHealthApp_Technical_Presentation.mp4
 
 ---
