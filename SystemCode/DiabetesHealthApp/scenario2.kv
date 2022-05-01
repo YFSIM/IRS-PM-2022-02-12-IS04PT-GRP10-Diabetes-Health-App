@@ -1,0 +1,141 @@
+#:import hex kivy.utils.get_color_from_hex
+<scenario2_Layout>
+	BoxLayout:
+		orientation: 'vertical'
+		size: root.width*0.6, root.height*(0.1)
+		pos: root.width*(1-0.6)/2, root.height*(0.9)
+		
+		canvas:
+            Color: 
+                rgba: hex('#40A698')
+            Rectangle:
+                size: self.size
+                pos: self.pos 
+				
+		Label:
+			id: welcome_label
+			text: 'Life Style'
+
+	BoxLayout:
+		orientation: 'horizontal'
+		size: root.width*0.6, root.height*0.7
+		pos: root.width*(1-0.6)/2, root.height*(0.2)
+		BoxLayout:
+			orientation: 'vertical'
+			Label:
+				id: scenario2_age_label
+				text: 'Age (YEARS): '
+			TextInput:
+				id: scenario2_age_inputbox
+				text: '1'
+				hint_text: '(What is your age?)'
+				input_type: 'number' 
+				input_filter: 'int'
+				#on_text: root.update_padding(args[0])
+				#padding_x: (self.width - self.text_width) / 2
+				#foreground_color: (0,1,0,1) if root.validated else (1,0,0,1)
+			Label:
+				id: scenario2_height_label
+				text: 'Height (CM): '
+			TextInput:
+				id: scenario2_height_inputbox
+				text: '100'
+				hint_text: '(What is your height?)'
+				input_type: 'number' 
+				input_filter: 'int'
+			Label:
+				id: scenario2_weight_label
+				text: 'Weight (KG): '
+			TextInput:
+				id: scenario2_weight_inputbox
+				text: '50'
+				hint_text: '(What is your weight?)'
+				input_type: 'number' 
+				input_filter: 'int'
+			Label:
+				id: scenario2_activity_label
+				text: 'Activity: '	
+			Spinner:
+				id: scenario2_activity_spinner
+				text: '(?)'
+				values: ['activity1','activity2','activity3','activity4','activity5']
+				#on_text: root.spinner_clicked(scenario2_activity_spinner.text)
+				on_text: root.update_spinner_domain_for_category(scenario2_activity_spinner.text)
+			Label:
+				id: scenario2_category_label
+				text: 'Category: '	
+			Spinner:
+				id: scenario2_category_spinner
+				text: '(?)'
+				values: ['category1','category2','category3','category4','category5']
+				on_text: root.spinner_clicked(scenario2_category_spinner.text)
+			
+		BoxLayout:
+			orientation: 'vertical'
+			Label:
+				id: scenario2_exercisefrequency_label
+				text: 'Exercise frequency \n(days per week): '
+			Spinner:
+				id: scenario2_exercisefrequency_spinner
+				text: '0'
+				values: ['0','1','2','3','4','5','6','7']
+				on_text: root.spinner_clicked(scenario2_exercisefrequency_spinner.text)
+			Label:
+				id: scenario2_exerciseduration_label
+				text: 'Exercise duration \n(hours per day): '
+			Spinner:
+				id: scenario2_exerciseduration_spinner
+				text: '0'
+				values: ['0','0.5','1','1.5','2','2.5','3','3.5','4','4.5','5','5.5','6']
+				on_text: root.spinner_clicked(scenario2_exerciseduration_spinner.text)
+			Label:
+				id: scenario2_breakfast_label
+				text: 'Breakfast: '
+			Spinner:
+				id: scenario2_breakfast_spinner
+				text: '(?)'
+				values: ['breakfast1','breakfast2','breakfast3','breakfast4','breakfast5']
+				on_text: root.spinner_clicked(scenario2_breakfast_spinner.text)
+			Label:
+				id: scenario2_lunch_label
+				text: 'Lunch: '	
+			Spinner:
+				id: scenario2_lunch_spinner
+				text: '(?)'
+				values: ['lunch1','lunch2','lunch3','lunch4','lunch5']
+				on_text: root.spinner_clicked(scenario2_lunch_spinner.text)
+			Label:
+				id: scenario2_dinner_label
+				text: 'Dinner: '	
+			Spinner:
+				id: scenario2_dinner_spinner
+				text: '(?)'
+				values: ['dinner1','dinner2','dinner3','dinner4','dinner5']
+				on_text: root.spinner_clicked(scenario2_dinner_spinner.text)
+		
+	BoxLayout:
+		orientation: 'vertical'
+		size: root.width*0.6, root.height*0.1
+		pos: root.width*(1-0.6)/2, root.height*(0.1)	
+				
+		Button:
+			id: button_id
+			text: 'Outcome'
+			on_press: root.getImprovementSuggestion_button_clicked(scenario2_age_inputbox.text,scenario2_height_inputbox.text,scenario2_weight_inputbox.text,scenario2_activity_spinner.text,scenario2_category_spinner.text,scenario2_exercisefrequency_spinner.text,scenario2_exerciseduration_spinner.text,scenario2_breakfast_spinner.text,scenario2_lunch_spinner.text,scenario2_dinner_spinner.text)
+	
+	BoxLayout:
+		orientation: 'vertical'
+		size: root.width*0.6, root.height*0.1
+		pos: root.width*(1-0.6)/2, root.height*(0)		
+		Button:
+			id: home_button_id
+			text: 'Go to Home page'
+			
+			on_press: root.button_clicked('home')
+
+<ValidateLabel>:
+    size_hint: (None, None)
+    size: (280, 60)
+    Label:
+        id: label
+        text: "Must be a float"

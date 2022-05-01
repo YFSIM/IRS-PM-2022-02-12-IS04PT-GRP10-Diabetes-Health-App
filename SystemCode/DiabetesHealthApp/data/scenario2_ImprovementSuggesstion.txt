@@ -1,0 +1,19 @@
+Q: What does the weather look like in Singapore
+A: Currently, it is mostly cloudy in Singapore
+Description: MyWeatherBot can answer correct answer as expected. 
+
+Q: What is the weather in China?
+A: Currently, it is sunny in China
+Description: MyWeatherBot can recognize "China" although it is connected to question mark. 
+
+Q: What is the weather in China ?
+A: Currently, it is sunny in China
+Description: MyWeatherBot can answer correct answer as expected. 
+
+Q: What is the humidity in Singapore ?
+A: Currently, it is 73 % in China
+Description: MyWeatherBot can answer correct answer as expected although my intent parameter is changed from country to description. 
+
+Q: How old are you?
+A: I dont know your question. Can you please try to rephrase?
+Description: If no intent is identified, MyWeatherBot will return default response to ask user to restructure his question. 

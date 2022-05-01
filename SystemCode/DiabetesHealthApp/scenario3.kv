@@ -1,0 +1,45 @@
+#:import hex kivy.utils.get_color_from_hex
+<scenario3_Layout>
+	BoxLayout:
+		orientation: "vertical"
+		size: root.width*0.6, root.height*(0.9)
+		pos: root.width*(1-0.6)/2, root.height*(0.1)
+		
+		canvas:
+            Color: 
+                rgba: hex('#40A698')
+            Rectangle:
+                size: self.size
+                pos: self.pos 
+				
+		Label:
+			id: welcome_label
+			text: "Upload"
+		
+		Image:
+			source: "images/sample0.png"
+		
+		FileChooserIconView:
+		    id: filechooser
+		
+
+		Label:
+			id: scenario3_output_label
+			text: "Label: "	
+		Label:
+			id: scenario3_output_result
+			text: "GOOD or NOT"	
+			
+	BoxLayout:
+		orientation: "vertical"
+		size: root.width*0.6, root.height*0.1
+		pos: root.width*(1-0.6)/2, root.height*(0)			
+		Button:
+			id: button_id
+			text: "Feedback"
+		
+		Button:
+			id: home_button_id
+			text: "Go to Home page"
+			
+			on_press: root.button_clicked('home')
