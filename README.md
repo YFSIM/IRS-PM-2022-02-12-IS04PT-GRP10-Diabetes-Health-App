@@ -8,8 +8,8 @@
 
 ## SECTION 2 : EXECUTIVE SUMMARY / PAPER ABSTRACT
 Diabetes is a worldwide health problem that have affected 400 million people worldwide. There are two major types of diabetes:  
-     Type 1 – often diagnosed in childhood. 
-     Type 2 – largely caused by an unhealthy lifestyle and diet.  
+     1. Type 1 – often diagnosed in childhood. 
+     2. Type 2 – largely caused by an unhealthy lifestyle and diet.  
 
 From a study by International Diabetes Federation (IDF) done in 2015, it revealed that Singapore had the second highest proportion of diabetes among developed nations. The number of diabetic cases were projected to further increase by another 200K to 600K by 2030. In terms of long-term complications, we had the highest rate of lower limb amputation in the world with about 1,200 diabetes patients undergoing amputation every year. 
 
