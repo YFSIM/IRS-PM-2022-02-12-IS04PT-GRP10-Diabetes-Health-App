@@ -41,8 +41,7 @@ This is achieved using an AI-powered Do-It-Yourself (DIY) Diabetes Health App as
 
 [![Sudoku AI Solver](http://img.youtube.com/vi/-AiYLUjP6o8/0.jpg)](https://youtu.be/-AiYLUjP6o8 "Sudoku AI Solver")
 
-Note: It is not mandatory for every project member to appear in video presentation; Presentation by one project member is acceptable. 
-More reference video presentations [here](https://telescopeuser.wordpress.com/2018/03/31/master-of-technology-solution-know-how-video-index-2/ "video presentations")
+https://github.com/YFSIM/IRS-PM-2022-02-12-IS04PT-GRP10-Diabetes-Health-App/blob/main/Video/DiabeticHealthApp_Technical_Presentation.mp4
 
 ---
 
