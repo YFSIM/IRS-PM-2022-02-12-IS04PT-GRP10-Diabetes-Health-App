@@ -1,0 +1,11 @@
+Group Name: Group 10
+
+Member:
+Sahendra Pang	(A0135877N)	
+Santi	        (A0249294R)	
+Sim Yuh Fan	    (A0249251E)	
+Tan Xiang Feng	(A0072452L)	
+Zhang Zhewei	(A0249258R)
+
+Link to Github:
+https://github.com/YFSIM/IRS-PM-2022-02-12-IS04PT-GRP10-Diabetes-Health-App
