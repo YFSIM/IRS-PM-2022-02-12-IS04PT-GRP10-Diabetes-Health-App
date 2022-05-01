@@ -19,7 +19,11 @@ This E-Doctor is an expert in Diabates. It can provides the following services r
 | :------------ |:---------------:| :-----| :-----|
 | Sahendra Pang | A0135877N | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| e0938644@u.nus.edu |
 | Santi- | A0249294R | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| e0938899@u.nus.edu |
-| Sim Yuh Fan | A0249251E | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| e0938856@u.nus.edu |
+| Sim Yuh Fan | A0249251E | Administrative Lead 
+
+UI/UX Development 
+
+Backend Application Development | e0938856@u.nus.edu |
 | Tan Xiang Feng | A0072452L | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| e0938623@u.nus.edu |
 | Zhang Zhewei | A0249258R | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| e0938863@u.nus.edu |
 
