@@ -50,10 +50,13 @@ More reference video presentations [here](https://telescopeuser.wordpress.com/20
 
 `Refer to "User Manual.pdf" in project report folder at Github Folder: ProjectReport`
 
+The document will contain below infromation
 
-### [ 1 ] APK installation & build
+### [ 1 ] App User Manual
 
-### [ 2 ] Engine installation & build
+### [ 2 ] APK installation & build
+
+### [ 3 ] Engine installation & build
 
 ---
 ## SECTION 6 : PROJECT REPORT / PAPER
@@ -65,6 +68,8 @@ More reference video presentations [here](https://telescopeuser.wordpress.com/20
 ## SECTION 7 : MISCELLANEOUS
 
 `Refer to Github Folder: Miscellaneous`
+
+### Data
 
 ### Data Preparation
 
