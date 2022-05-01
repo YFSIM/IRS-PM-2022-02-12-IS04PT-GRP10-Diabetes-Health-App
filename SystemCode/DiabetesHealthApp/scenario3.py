@@ -16,6 +16,9 @@ scenario1='Lifestyle Recommender'
 scenario2='Predicting Risk of Diabetes'
 scenario3='Detect Diabetic Retinopathy'
 
+import requests
+import json
+
 Builder.load_file('scenario3.kv')
 
 class scenario3_Layout(Widget):
@@ -53,6 +56,21 @@ class scenario3_Layout(Widget):
     def process(self):
         #text = self.root.ids.input.text
         print(text)
+    
+    def image_selected(self, filename):
+        try:
+            self.ids.DR_image.source = filename[0]
+            print('selected: '+filename)
+        except:
+            pass
+        
+        with open('data/scenario3_DiabeticRetinopathy.txt', 'w') as f:
+            json.dump(filename[0], f)
+    
+    def DR_validation(self):
+        from subprocess import Popen, PIPE
+        process = Popen(['python3', 'scenario3_result.py'], stdout=PIPE, stderr=PIPE)
+    
     
 class Diabetes_Health_APPApp(App):
     def build(self):

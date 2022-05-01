@@ -1,0 +1,3 @@
+title=DiabetesHealthApp
+author=SIM YUH FAN
+orientation=portrait

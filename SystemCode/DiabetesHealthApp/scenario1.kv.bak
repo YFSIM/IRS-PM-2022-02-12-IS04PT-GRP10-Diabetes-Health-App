@@ -1,0 +1,534 @@
+#:import hex kivy.utils.get_color_from_hex
+<scenario1_Layout>
+	BoxLayout:
+		orientation: "vertical"
+		size: root.width*0.6, root.height*(0.8)
+		pos: root.width*(1-0.6)/2, root.height*(0.2)
+		
+		canvas:
+            Color: 
+                rgba: hex('#40A698')
+            Rectangle:
+                size: self.size
+                pos: self.pos 
+				
+		Label:
+			id: welcome_label
+			text: "Risk Calculator"
+			size: root.width*0.8, root.height*0.1
+			
+		BoxLayout:
+			orientation: "horizontal"
+			Label:
+				id: scenario1_sex_label
+				size_hint: (0.4,1)
+				text: "Sex: "
+			Label:
+				id: scenario1_sex_label-MALE
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				text: "MALE"
+			Switch:
+				id: scenario1_sex_switch
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				active: True
+				on_active: root.switch_clicked(self, self.active)
+				canvas:
+					Color:
+						rgb: 1,1,1
+					Rectangle:
+						source: 'images/switch.png'        # make or download your background jpg
+						size: sp(83), sp(32)
+						pos: int(self.center_x - sp(41)), int(self.center_y - sp(16))
+					Rectangle:
+						source: 'images/switch_slider.png' # make or download your slider jpg
+						size: sp(43), sp(32)
+						pos: int(self.center_x - sp(41) + self.active_norm_pos * sp(41)), int(self.center_y - sp(16))
+			Label:
+				id: scenario1_sex_label-FEMALE
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				text: "FEMALE"
+		
+		BoxLayout:
+			orientation: "horizontal"
+			Label:
+				id: scenario1_age_label
+				size_hint: (0.4,1)
+				size: root.width*0.2, root.height
+				text: "Age: "	
+			TextInput:
+				id: scenario1_age_inputbox
+				size_hint: (0.4,1)
+				text: '1'
+				hint_text: '(What is your age?)'
+				input_type: 'number' 
+				input_filter: 'int'
+			Label:
+				id: scenario1_age_label-yearold
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				text: "Year-old"
+			
+		BoxLayout: 
+			orientation: "horizontal"
+			Label:
+				id: scenario1_weight_label-Weight
+				size_hint: (0.4,1)
+				size: root.width*0.2, root.height
+				text: "Weight: "
+			TextInput:
+				id: scenario1_weight_inputbox
+				size_hint: (0.4,1)
+				size: root.width*0.4, root.height
+				text: '50'
+				hint_text: '(What is your weight?)'
+				input_type: 'number' 
+				input_filter: 'int'
+			Label:
+				id: scenario1_weight_label-KG
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				text: "KG"
+		
+		BoxLayout: 
+			orientation: "horizontal"
+			Label:
+				id: scenario1_height_label-Height
+				size_hint: (0.4,1)
+				size: root.width*0.2, root.height
+				text: "Height: "
+			TextInput:
+				id: scenario1_height_inputbox
+				size_hint: (0.4,1)
+				text: '100'
+				hint_text: '(What is your height?)'
+				input_type: 'number' 
+				input_filter: 'int'
+			Label:
+				id: scenario1_height_label-cm
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				text: "cm"
+		
+		BoxLayout:
+			orientation: "horizontal"
+			Label:
+				id: scenario1_doyouhave_label
+				text: "Do you have any of the following:"
+		
+		BoxLayout:
+			orientation: "horizontal"
+			Label:
+				id: scenario1_bloodpresure_label
+				size_hint: (0.4,1)
+				size: root.width*0.2, root.height
+				text: "Blood Pressure: "
+			Label:
+				id: scenario1_bloodpresure_label-NO
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				text: "NO"
+			Switch:
+				id: scenario1_bloodpresure_switch
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				active: True
+				on_active: root.switch_clicked(self, self.active)
+				canvas:
+					Color:
+						rgb: 1,1,1
+					Rectangle:
+						source: 'images/switch.png'        # make or download your background jpg
+						size: sp(83), sp(32)
+						pos: int(self.center_x - sp(41)), int(self.center_y - sp(16))
+					Rectangle:
+						source: 'images/switch_slider.png' # make or download your slider jpg
+						size: sp(43), sp(32)
+						pos: int(self.center_x - sp(41) + self.active_norm_pos * sp(41)), int(self.center_y - sp(16))
+			Label:
+				id: scenario1_bloodpresure_label-YES
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				text: "YES"
+		
+		BoxLayout:
+			orientation: "horizontal"
+			Label:
+				id: scenario1_cholesterol_label
+				size_hint: (0.4,1)
+				size: root.width*0.2, root.height
+				text: "Cholesterol: "
+			Label:
+				id: scenario1_cholesterol_label-NO
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				text: "NO"
+			Switch:
+				id: scenario1_cholesterol_switch
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				active: True
+				on_active: root.switch_clicked(self, self.active)
+				canvas:
+					Color:
+						rgb: 1,1,1
+					Rectangle:
+						source: 'images/switch.png'        # make or download your background jpg
+						size: sp(83), sp(32)
+						pos: int(self.center_x - sp(41)), int(self.center_y - sp(16))
+					Rectangle:
+						source: 'images/switch_slider.png' # make or download your slider jpg
+						size: sp(43), sp(32)
+						pos: int(self.center_x - sp(41) + self.active_norm_pos * sp(41)), int(self.center_y - sp(16))
+			Label:
+				id: scenario1_cholesterol_label-YES
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				text: "YES"
+				
+		BoxLayout:
+			orientation: "horizontal"
+			Label:
+				id: scenario1_smoke_label
+				size_hint: (0.4,1)
+				size: root.width*0.2, root.height
+				font_size: dp(10)
+				text: "Smoke \n(at least 5 packs=100 cigarettes)"
+			Label:
+				id: scenario1_smoke_label-NO
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				text: "NO"
+			Switch:
+				id: scenario1_smoke_switch
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				active: True
+				on_active: root.switch_clicked(self, self.active)
+				canvas:
+					Color:
+						rgb: 64,166,152
+					Rectangle:
+						source: 'images/switch.png'        # make or download your background jpg
+						size: sp(83), sp(32)
+						pos: int(self.center_x - sp(41)), int(self.center_y - sp(16))
+					Rectangle:
+						source: 'images/switch_slider.png' # make or download your slider jpg
+						size: sp(43), sp(32)
+						pos: int(self.center_x - sp(41) + self.active_norm_pos * sp(41)), int(self.center_y - sp(16))
+			Label:
+				id: scenario1_smoke_label-YES
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				text: "YES"
+		
+		BoxLayout:
+			orientation: "horizontal"
+			Label:
+				id: scenario1_stroke_label
+				size_hint: (0.4,1)
+				size: root.width*0.2, root.height
+				text: "Stroke"
+			Label:
+				id: scenario1_stroke_label-NO
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				text: "NO"
+			Switch:
+				id: scenario1_stroke_switch
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				active: True
+				on_active: root.switch_clicked(self, self.active)
+				canvas:
+					Color:
+						rgb: 1,1,1
+					Rectangle:
+						source: 'images/switch.png'        # make or download your background jpg
+						size: sp(83), sp(32)
+						pos: int(self.center_x - sp(41)), int(self.center_y - sp(16))
+					Rectangle:
+						source: 'images/switch_slider.png' # make or download your slider jpg
+						size: sp(43), sp(32)
+						pos: int(self.center_x - sp(41) + self.active_norm_pos * sp(41)), int(self.center_y - sp(16))
+			Label:
+				id: scenario1_stroke_label-YES
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				text: "YES"
+		
+		BoxLayout:
+			orientation: "horizontal"
+			Label:
+				id: scenario1_chd_label
+				size_hint: (0.4,1)
+				size: root.width*0.2, root.height
+				font_size: dp(10)
+				text: "Coronary heart disease (CHD)\n or Myocardial infarction (MI): "
+			Label:
+				id: scenario1_chd_label-NO
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				text: "NO"
+			Switch:
+				id: scenario1_chd_switch
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				active: True
+				on_active: root.switch_clicked(self, self.active)
+				canvas:
+					Color:
+						rgb: 1,1,1
+					Rectangle:
+						source: 'images/switch.png'        # make or download your background jpg
+						size: sp(83), sp(32)
+						pos: int(self.center_x - sp(41)), int(self.center_y - sp(16))
+					Rectangle:
+						source: 'images/switch_slider.png' # make or download your slider jpg
+						size: sp(43), sp(32)
+						pos: int(self.center_x - sp(41) + self.active_norm_pos * sp(41)), int(self.center_y - sp(16))
+			Label:
+				id: scenario1_chd_label-YES
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				text: "YES"
+		
+		BoxLayout:
+			orientation: "horizontal"
+			Label:
+				id: scenario1_physicalactivity_label
+				size_hint: (0.4,1)
+				size: root.width*0.2, root.height
+				font_size: dp(10)
+				text: "Do any physical activity\n over the past 30 days"
+			Label:
+				id: scenario1_physicalactivity_label-NO
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				text: "NO"
+			Switch:
+				id: scenario1_physicalactivity_switch
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				active: True
+				on_active: root.switch_clicked(self, self.active)
+				canvas:
+					Color:
+						rgb: 1,1,1
+					Rectangle:
+						source: 'images/switch.png'        # make or download your background jpg
+						size: sp(83), sp(32)
+						pos: int(self.center_x - sp(41)), int(self.center_y - sp(16))
+					Rectangle:
+						source: 'images/switch_slider.png' # make or download your slider jpg
+						size: sp(43), sp(32)
+						pos: int(self.center_x - sp(41) + self.active_norm_pos * sp(41)), int(self.center_y - sp(16))
+			Label:
+				id: scenario1_physicalactivity_label-YES
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				text: "YES"
+		
+		BoxLayout:
+			orientation: "horizontal"
+			Label:
+				id: scenario1_fruit_label
+				size_hint: (0.4,1)
+				size: root.width*0.2, root.height
+				font_size: dp(10)
+				text: "Consume fruit more than 1 time daily: "
+			Label:
+				id: scenario1_fruit_label-NO
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				text: "NO"
+			Switch:
+				id: scenario1_fruit_switch
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				active: True
+				on_active: root.switch_clicked(self, self.active)
+				canvas:
+					Color:
+						rgb: 1,1,1
+					Rectangle:
+						source: 'images/switch.png'        # make or download your background jpg
+						size: sp(83), sp(32)
+						pos: int(self.center_x - sp(41)), int(self.center_y - sp(16))
+					Rectangle:
+						source: 'images/switch_slider.png' # make or download your slider jpg
+						size: sp(43), sp(32)
+						pos: int(self.center_x - sp(41) + self.active_norm_pos * sp(41)), int(self.center_y - sp(16))
+			Label:
+				id: scenario1_fruit_label-YES
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				text: "YES"
+		
+		BoxLayout:
+			orientation: "horizontal"
+			Label:
+				id: scenario1_vegetable_label
+				size_hint: (0.4,1)
+				size: root.width*0.2, root.height
+				font_size: dp(10)
+				text: "Consume vegetable more than 1 time daily: "
+			Label:
+				id: scenario1_vegetable_label-NO
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				text: "NO"
+			Switch:
+				id: scenario1_vegetable_switch
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				active: True
+				on_active: root.switch_clicked(self, self.active)
+				canvas:
+					Color:
+						rgb: 1,1,1
+					Rectangle:
+						source: 'images/switch.png'        # make or download your background jpg
+						size: sp(83), sp(32)
+						pos: int(self.center_x - sp(41)), int(self.center_y - sp(16))
+					Rectangle:
+						source: 'images/switch_slider.png' # make or download your slider jpg
+						size: sp(43), sp(32)
+						pos: int(self.center_x - sp(41) + self.active_norm_pos * sp(41)), int(self.center_y - sp(16))
+			Label:
+				id: scenario1_vegetable_label-YES
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				text: "YES"
+		
+		BoxLayout:
+			orientation: "horizontal"
+			Label:
+				id: scenario1_heavydrink_label
+				size_hint: (0.4,1)
+				size: root.width*0.2, root.height
+				font_size: dp(10)
+				text: "Heavy drinkers? (more than \n14 weekly for men, 7 weekly for women)"
+				multiline: True
+			Label:
+				id: scenario1_heavydrink_label-NO
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				text: "NO"
+			Switch:
+				id: scenario1_heavydrink_switch
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				active: True
+				on_active: root.switch_clicked(self, self.active)
+				canvas:
+					Color:
+						rgb: 1,1,1
+					Rectangle:
+						source: 'images/switch.png'        # make or download your background jpg
+						size: sp(83), sp(32)
+						pos: int(self.center_x - sp(41)), int(self.center_y - sp(16))
+					Rectangle:
+						source: 'images/switch_slider.png' # make or download your slider jpg
+						size: sp(43), sp(32)
+						pos: int(self.center_x - sp(41) + self.active_norm_pos * sp(41)), int(self.center_y - sp(16))
+			Label:
+				id: scenario1_heavydrink_label-YES
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				text: "YES"
+		
+		BoxLayout:
+			orientation: "horizontal"
+			Label:
+				id: scenario1_climb_label
+				size_hint: (0.4,1)
+				size: root.width*0.2, root.height
+				font_size: dp(10)
+				text: "Serious difficulty walking or climbing stairs"
+			Label:
+				id: scenario1_climb_label-NO
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				text: "NO"
+			Switch:
+				id: scenario1_climb_switch
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				active: True
+				on_active: root.switch_clicked(self, self.active)
+				canvas:
+					Color:
+						rgb: 1,1,1
+					Rectangle:
+						source: 'images/switch.png'        # make or download your background jpg
+						size: sp(83), sp(32)
+						pos: int(self.center_x - sp(41)), int(self.center_y - sp(16))
+					Rectangle:
+						source: 'images/switch_slider.png' # make or download your slider jpg
+						size: sp(43), sp(32)
+						pos: int(self.center_x - sp(41) + self.active_norm_pos * sp(41)), int(self.center_y - sp(16))
+			Label:
+				id: scenario1_climb_label-YES
+				size_hint: (0.2,1)
+				size: root.width*0.2, root.height
+				text: "YES"
+				
+		BoxLayout:
+			orientation: "horizontal"
+			Label:
+				id: scenario1_mentalhealth_label
+				size_hint: (0.4,1)
+				size: root.width*0.2, root.height
+				font_size: dp(10)
+				#text: "Now thinking about your mental health, which includes stress, depression, and problems with\n emotions, for how many days during the past 30 days was your mental health not good?"	
+				text: "Day(s) of stress/depression \nover the past 30 days"	
+			Spinner:
+				id: scenario1_mentalhealth_spinner
+				size_hint: (0.6,1)
+				size: root.width*0.6, root.height
+				text: "1"
+				values: ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30']
+				on_text: root.spinner_clicked(scenario1_mentalhealth_spinner.text)
+			
+		BoxLayout:
+			orientation: "horizontal"
+			Label:
+				id: scenario1_physicalhealth_label
+				size_hint: (0.4,1)
+				size: root.width*0.2, root.height
+				font_size: dp(10)
+				#text: "Now thinking about your physical health, which includes physical illness and injury,\n for how many days during the past 30 days was your physical health not good?"	
+				text: "Day(s) of physical health \nproblem over the past 30 days"
+			Spinner:
+				id: scenario1_physicalhealth_spinner
+				size_hint: (0.6,1)
+				size: root.width*0.6, root.height
+				text: '1'
+				values: ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30']
+				on_text: root.spinner_clicked(scenario1_physicalhealth_spinner.text)
+		
+	BoxLayout:
+		orientation: "horizontal"
+		size: root.width*0.6, root.height*0.1
+		pos: root.width*(1-0.6)/2, root.height*(0.1)			
+		Button:
+			id: button_id
+			text: "Let`s calculate!"
+			on_press: root.getDiabeticRisk_button_clicked(scenario1_bloodpresure_switch.active, scenario1_cholesterol_switch.active,scenario1_weight_inputbox.text,scenario1_height_inputbox.text,scenario1_smoke_switch.active,scenario1_stroke_switch.active,scenario1_chd_switch.active,scenario1_physicalactivity_switch.active,scenario1_fruit_switch.active,scenario1_vegetable_switch.active,scenario1_heavydrink_switch.active,scenario1_mentalhealth_spinner.text,scenario1_physicalhealth_spinner.text,scenario1_climb_switch.active,scenario1_sex_switch.active,scenario1_age_inputbox.text)
+		
+		Button:
+			id: reducerisk_button_id
+			text: ""
+			on_press: root.button_clicked('Predicting Risk of Diabetes')
+	
+	BoxLayout:
+		orientation: "vertical"
+		size: root.width*0.6, root.height*0.1
+		pos: root.width*(1-0.6)/2, root.height*(0)	
+		Button:
+			id: home_button_id
+			text: "<Go to Home page>"
+			on_press: root.button_clicked('home')

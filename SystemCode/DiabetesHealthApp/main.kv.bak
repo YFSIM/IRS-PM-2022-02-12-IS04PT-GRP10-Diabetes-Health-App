@@ -1,0 +1,38 @@
+#:import hex kivy.utils.get_color_from_hex
+<MyLayout>
+	BoxLayout:
+		orientation: "vertical"
+		size: root.width*0.5, root.height
+		pos: root.width*(1-0.5)/2, root.height*(1-1)/2
+		
+		canvas:
+            Color: 
+                rgba: hex('#40A698')
+            Rectangle:
+                size: self.size
+                pos: self.pos
+		
+		Image:
+			source: "images/logo.jpeg"
+			size_hint: (1,0.5)
+		
+		Label:
+			id: click_label
+			size_hint: (1,0.1)
+			text: "Choose your preference below"
+			font_size: 16
+		
+		Spinner:
+			id: spinner_id
+			size_hint: (1,0.2)
+			text: "I want to ..."
+			values: ['Lifestyle Recommender','Predicting Risk of Diabetes','Detect Diabetic Retinopathy']
+			
+			on_text: root.spinner_clicked(spinner_id.text)
+		
+		Button:
+			id: button_id
+			size_hint: (1,0.2)
+			text: "Let`s check!"
+			
+			on_press: root.button_clicked(spinner_id.text)

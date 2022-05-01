@@ -1,0 +1,38 @@
+#:import hex kivy.utils.get_color_from_hex
+<scenario2_result_Layout>
+	BoxLayout:
+		orientation: "vertical"
+		size: root.width*0.6, root.height
+		pos: root.width*(1-0.6)/2, root.height*(0)
+		
+		canvas:
+            Color: 
+                rgba: hex('#40A698')
+            Rectangle:
+                size: self.size
+                pos: self.pos 
+				
+		Label:
+			id: welcome_label
+			text: "Diabetic Health Report"
+		
+		Image:
+			source: "images/profilepicture.png"
+		
+		Label:
+			id: scenario2_output_label
+			text: "~~~Some advices for you~~~"	
+		Label:
+			id: scenario2_output_result
+			text: "(Your outcome will be shown at here soon)"	
+			
+	BoxLayout:
+		orientation: "vertical"
+		size: root.width*0.6, root.height*0.1
+		pos: root.width*(1-0.6)/2, root.height*(0)			
+		
+		Button:
+			id: home_button_id
+			text: "Go to Home page"
+			
+			on_press: root.button_clicked('home')

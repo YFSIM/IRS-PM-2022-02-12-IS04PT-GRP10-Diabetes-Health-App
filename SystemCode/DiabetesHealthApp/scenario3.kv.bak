@@ -1,0 +1,58 @@
+#:import hex kivy.utils.get_color_from_hex
+<scenario3_Layout>
+	id: my_widget
+	BoxLayout:
+		orientation: "vertical"
+		size: root.width*0.6, root.height*(0.1)
+		pos: root.width*(1-0.6)/2, root.height*(0.9)
+		
+		canvas:
+            Color: 
+                rgba: hex('#40A698')
+            Rectangle:
+                size: self.size
+                pos: self.pos 
+				
+		Label:
+			id: welcome_label
+			text: "Diabetic Retinopathy (DR) Detection"
+			
+	BoxLayout:
+		orientation: "vertical"
+		size: root.width*0.6, root.height*(0.7)
+		pos: root.width*(1-0.6)/2, root.height*(0.2)
+		
+		Label:
+			id: scenario3_output_label
+			text: "Please upload a photo:"	
+			size_hint: (1,0.2)
+		
+		FileChooserIconView:
+		    id: filechooser
+			size_hint: (1,0.4)
+			on_selection: my_widget.image_selected(filechooser.selection)
+		
+		Label:
+			id: scenario3_output_label
+			text: "Selected photo:"	
+			size_hint: (1,0.2)
+		
+		Image:
+			id: DR_image
+			source: ""
+			size_hint: (1,0.4)
+			
+	BoxLayout:
+		orientation: "vertical"
+		size: root.width*0.6, root.height*0.2
+		pos: root.width*(1-0.6)/2, root.height*(0)			
+		Button:
+			id: button_id
+			text: "Feedback DR on selected photo"
+			on_press: root.DR_validation（）
+		
+		Button:
+			id: home_button_id
+			text: "Go to Home page"
+			
+			on_press: root.button_clicked('home')
