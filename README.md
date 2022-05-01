@@ -49,6 +49,7 @@ More reference video presentations [here](https://telescopeuser.wordpress.com/20
 ## SECTION 5 : USER GUIDE
 
 `Refer to appendix <Installation & User Guide> in project report at Github Folder: ProjectReport`
+https://github.com/YFSIM/IRS-PM-2022-02-12-ISY5001-GRP10-ProjectName-Diabetes-E-Doctor/blob/main/ProjectReport/User%20Manual.pdf
 
 ### [ 1 ] To run the system using iss-vm
 
