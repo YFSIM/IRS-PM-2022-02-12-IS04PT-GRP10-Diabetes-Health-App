@@ -7,5 +7,5 @@ Sim Yuh Fan	    (A0249251E)
 Tan Xiang Feng	(A0072452L)	
 Zhang Zhewei	(A0249258R)
 
-Link to Github:
+Link to Github (this full project need to be cloned, download zip will not work due to large file size):
 https://github.com/YFSIM/IRS-PM-2022-02-12-IS04PT-GRP10-Diabetes-Health-App
