@@ -1,6 +1,6 @@
 import kivy   
 from kivy.app import App   
-kivy.require('2.1.0') 
+kivy.require('2.0.0')
 from kivy.lang import Builder
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button  import Button
@@ -11,6 +11,9 @@ from kivy.uix.image import Image
 from kivy.uix.label import Label
 from kivy.uix.textinput import TextInput
 from kivy.uix.widget import Widget
+#from scenario1 import Diabetes_Health_APPApp1
+#from scenario2 import Diabetes_Health_APPApp2
+#from main import Diabetes_Health_APPApp
 
 scenario1='Lifestyle Recommender'
 scenario2='Predicting Risk of Diabetes'
@@ -30,16 +33,21 @@ class scenario3_Layout(Widget):
         print('chosen='+value)
         if value == scenario1:
             print('At: '+scenario1+': now')
-            process = Popen(['python3', 'scenario1.py'], stdout=PIPE, stderr=PIPE)
+            #process = Popen(['python3', 'scenario1.py'], stdout=PIPE, stderr=PIPE)
+            process = Popen(['scenario1.py'], stdout=PIPE, stderr=PIPE)
         elif value == scenario2:
             print('At: '+scenario2+': now')
-            process = Popen(['python3', 'scenario2.py'], stdout=PIPE, stderr=PIPE)
+            #process = Popen(['python3', 'scenario2.py'], stdout=PIPE, stderr=PIPE)
+            process = Popen(['scenario2.py'], stdout=PIPE, stderr=PIPE)
         elif value == scenario3:
             print('At: '+scenario3+': now')
-            process = Popen(['python3', 'scenario3.py'], stdout=PIPE, stderr=PIPE)
+            #process = Popen(['python3', 'scenario3.py'], stdout=PIPE, stderr=PIPE)
+            process = Popen(['scenario3.py'], stdout=PIPE, stderr=PIPE)
         else:
             print('At: HOMEPAGE now')
-            process = Popen(['python3', 'main.py'], stdout=PIPE, stderr=PIPE)
+            #process = Popen(['python3', 'main.py'], stdout=PIPE, stderr=PIPE)
+            #process = Popen([ 'main.py'], stdout=PIPE, stderr=PIPE)
+            #Diabetes_Health_APPApp.run()
         
     def switch_clicked(self, switchObject, switchValue): 
         print(switchValue)
@@ -72,10 +80,10 @@ class scenario3_Layout(Widget):
         process = Popen(['python3', 'scenario3_result.py'], stdout=PIPE, stderr=PIPE)
     
     
-class Diabetes_Health_APPApp(App):
+class Diabetes_Health_APPApp3(App):
     def build(self):
         return scenario3_Layout()
 
 # run Say Hello App Calss
 if __name__ == "__main__":
-    Diabetes_Health_APPApp().run()
+    Diabetes_Health_APPApp3().run()

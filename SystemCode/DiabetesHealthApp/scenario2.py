@@ -1,6 +1,6 @@
 import kivy   
 from kivy.app import App   
-kivy.require('2.1.0') 
+kivy.require('2.0.0')
 from kivy.lang import Builder
 from kivy.properties import BooleanProperty
 from kivy.uix.boxlayout import BoxLayout
@@ -13,6 +13,9 @@ from kivy.uix.image import Image
 from kivy.uix.label import Label
 from kivy.uix.textinput import TextInput
 from kivy.uix.widget import Widget
+#from scenario1 import Diabetes_Health_APPApp1
+#from scenario3 import Diabetes_Health_APPApp3
+#from main import Diabetes_Health_APPApp
 
 scenario1='Lifestyle Recommender'
 scenario2='Predicting Risk of Diabetes'
@@ -104,16 +107,17 @@ class scenario2_Layout(Widget):
         print('chosen='+value)
         if value == scenario1:
             print('At: '+scenario1+': now')
-            process = Popen(['python3', 'scenario1.py'], stdout=PIPE, stderr=PIPE)
+            process = Popen(['scenario1.py'], stdout=PIPE, stderr=PIPE)
         elif value == scenario2:
             print('At: '+scenario2+': now')
-            process = Popen(['python3', 'scenario2.py'], stdout=PIPE, stderr=PIPE)
+            process = Popen(['scenario2.py'], stdout=PIPE, stderr=PIPE)
         elif value == scenario3:
             print('At: '+scenario3+': now')
-            process = Popen(['python3', 'scenario3.py'], stdout=PIPE, stderr=PIPE)
+            process = Popen(['scenario3.py'], stdout=PIPE, stderr=PIPE)
         else:
             print('At: HOMEPAGE now')
-            process = Popen(['python3', 'main.py'], stdout=PIPE, stderr=PIPE)
+            #process = Popen(['main.py'], stdout=PIPE, stderr=PIPE)
+            #Diabetes_Health_APPApp.run()
         
     def switch_clicked(self, switchObject, switchValue): 
         print(switchValue)
@@ -171,7 +175,7 @@ class scenario2_Layout(Widget):
         )
         text_input.padding_x = (text_input.width - text_width)/2
         
-class Diabetes_Health_APPApp(App):
+class Diabetes_Health_APPApp2(App):
     def build(self):
         return scenario2_Layout()
     
@@ -183,20 +187,20 @@ class Diabetes_Health_APPApp(App):
                 r = requests.post(url = API_ENDPOINT_GET_ACTIVITY)
                 # extracting response text
                 objresponse = json.loads(r.text)
-                
+
                 #convert json(dict(key, value) to list[[key, value]]
                 for i in objresponse:
                     for temp1,temp2 in i.items():
                         activity_table.append(temp2)
-                    
+
                 activity_id = self.root.ids['scenario2_activity_spinner']
                 activity_id.values = activity_table
             except Exception as e:
                 print(e)
                 return ''
-            
+
         update_spinner_domain_for_activity()
-        
+
         def update_category_basedon_activity():
             for j in activity_table:
                 data = {'activity': j}
@@ -205,7 +209,7 @@ class Diabetes_Health_APPApp(App):
                     r = requests.post(url = API_ENDPOINT_GET_MOTION, json = data)
                     # extracting response text
                     objresponse = json.loads(r.text)
-                    
+
                     for i in objresponse:
                         temp = []
                         for temp1,temp2 in i.items():
@@ -214,9 +218,9 @@ class Diabetes_Health_APPApp(App):
                 except Exception as e:
                     print(e)
                     return ''
-                
+
         update_category_basedon_activity()
-        
+
         def update_spinner_domain_for_meal(meal_type,meal_table):
             data = {'mealtype': meal_type}
             try:
@@ -224,27 +228,27 @@ class Diabetes_Health_APPApp(App):
                 r = requests.post(url = API_ENDPOINT_GET_RECIPE_MEALTYPE, json = data)
                 # extracting response text
                 objresponse = json.loads(r.text)
-                
+
                 #convert json(dict(key, value) to list[[key, value]]
                 for i in objresponse:
                     temp = []
                     for temp1,temp2 in i.items():
                         temp.append([temp1,temp2])
                     meal_table.append(temp)
-                    
+
                 list_of_meal_description = [x[1][1] for x in meal_table] #meal_table[1][1]=meal_description
-                
+
                 meal_type_id = self.root.ids['scenario2_'+meal_type+'_spinner']
                 meal_type_id.values = list_of_meal_description
-                
+
             except Exception as e:
                 print(e)
                 return ''
-            
+
         update_spinner_domain_for_meal('breakfast',breakfast_table)
         update_spinner_domain_for_meal('lunch',lunch_table)
         update_spinner_domain_for_meal('dinner',dinner_table)
 
 # run Say Hello App Calss
 if __name__ == "__main__":
-    Diabetes_Health_APPApp().run()
+    Diabetes_Health_APPApp2().run()
